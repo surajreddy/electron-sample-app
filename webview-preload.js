@@ -16,10 +16,7 @@ function confirmNavigation() {
 window.addEventListener(
   'beforeunload',
   (event) => {
-    if (confirmNavigation()) {
-      // return nothing - allows navigation
-    } else {
-      event.returnValue = 'stop navigation';
-    }
+    confirmNavigation(); // should block, but doesn't
+    event.returnValue = 'stop navigation'; // should stop navigation, but doesn't if called after calling showMessageBox.
   }
 );
