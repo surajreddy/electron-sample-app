@@ -10,7 +10,7 @@ function confirmNavigation() {
     cancelId: 1
   }); // Should block navigation, but doesn't.
 
-  return choice === 1;
+  return choice === 0;
 }
 
 window.addEventListener(
