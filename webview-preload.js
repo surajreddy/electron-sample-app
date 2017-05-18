@@ -8,7 +8,7 @@ function confirmNavigation() {
     message: 'Changes you made may not be saved.',
     defaultId: 0,
     cancelId: 1
-  }); // Should block navigation, but doesn't.
+  });
 
   return choice === 0;
 }
@@ -16,7 +16,7 @@ function confirmNavigation() {
 window.addEventListener(
   'beforeunload',
   (event) => {
-    confirmNavigation(); // should block, but doesn't
+    confirmNavigation();
     event.returnValue = 'stop navigation'; // should stop navigation, but doesn't if called after calling showMessageBox.
   }
 );
